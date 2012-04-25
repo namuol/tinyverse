@@ -911,12 +911,13 @@ html ->
           ax = @tx - @x
           ay = @ty - @y
           len = Math.sqrt(ax*ax + ay*ay)
-          ax /= len
-          ay /= len
-          ax *= @thrust
-          ay *= @thrust
-          @vx += ax
-          @vy += ay
+          if len > 0
+            ax /= len
+            ay /= len
+            ax *= @thrust
+            ay *= @thrust
+            @vx += ax
+            @vy += ay
 
           @x += @vx
           @y += @vy
