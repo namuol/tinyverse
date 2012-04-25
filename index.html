@@ -943,12 +943,14 @@
           ax = this.tx - this.x;
           ay = this.ty - this.y;
           len = Math.sqrt(ax * ax + ay * ay);
-          ax /= len;
-          ay /= len;
-          ax *= this.thrust;
-          ay *= this.thrust;
-          this.vx += ax;
-          this.vy += ay;
+          if (len > 0) {
+            ax /= len;
+            ay /= len;
+            ax *= this.thrust;
+            ay *= this.thrust;
+            this.vx += ax;
+            this.vy += ay;
+          }
           this.x += this.vx;
           this.y += this.vy;
           this.vx *= 1 - this.afterburn;
