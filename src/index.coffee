@@ -9,6 +9,7 @@ html ->
     script type:'text/javascript', src:'akihabara/gamecycle.js'
     script type:'text/javascript', src:'seedrandom-min.js'
     link rel:'stylesheet', href:'style.css'
+    meta charset:'utf-8'
     
     meta
       name:'viewport'
