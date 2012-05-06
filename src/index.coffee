@@ -15,6 +15,12 @@ html ->
       name:'viewport'
       content:'width:device-width; initial-scale:1.0; maximum-scale:1.0; user-scalable:0;'
   body ->
+    div id:'links', ->
+      a href:'http://namuol.github.com/', 'namuol.github.com'
+      text ' &ndash; '
+      a href:'http://muniverse-game.tumblr.com/', 'devlog'
+      text ' &ndash; '
+      a href:'http://twitter.com/louroboros/', '@louroboros'
     div id:'instructions', ->
       h3 -> 'Instructions:'
       p 'This is a sandbox, open-world game. There is no "win" condition.'
